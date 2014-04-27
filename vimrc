@@ -2,7 +2,7 @@
 
 " Settings
 set autoindent              " Autoindent code
-set colorcolumn=80          " Show end-of-line column in red
+set colorcolumn=81          " Show end-of-line column in red
 set encoding=utf-8          " UTF-8 enconding
 set expandtab               " Convert tab to spaces
 set guioptions-=T           " Don't show Gvim's toolbar
