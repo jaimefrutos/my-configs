@@ -31,9 +31,9 @@ Bundle 'Mustang2'
 Bundle 'ctrlp.vim'
 Bundle 'The-NERD-tree'
 Bundle 'Gundo'
-Bundle 'taglist.vim'
 Bundle 'ack.vim'
 Bundle 'Syntastic'
+Bundle 'Tagbar'
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list=1
@@ -48,7 +48,7 @@ colorscheme Mustang
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
 map <leader>g :GundoToggle<CR>
-map <leader>t :TlistToggle<CR>
+map <leader>t :TagbarToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>b :CtrlPBuffer<CR>
-map <f12> :!ctags -R .<CR>
+map <leader>c :!ctags -R .<CR>
