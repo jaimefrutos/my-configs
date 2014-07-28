@@ -5,6 +5,7 @@ set autoindent              " Autoindent code
 set colorcolumn=81          " Show end-of-line column in red
 set encoding=utf-8          " UTF-8 enconding
 set expandtab               " Convert tab to spaces
+set formatoptions-=or       " Don't try to be too smart when inserting comments
 set guioptions-=T           " Don't show Gvim's toolbar
 set guitablabel=%t          " Show only the name of the file on the tab
 set hlsearch                " Highlight search terms
@@ -19,8 +20,7 @@ set splitright              " Split vertically on the right of the current buffe
 set t_Co=256                " 256-colour terminal
 set tabstop=4               " Tab == 4 spaces
 set wildignore=*.swp,*.bak,*.pyc " Ignore files with these extensions
-syntax enable               " Colour syntax
-autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespaces before saving to a file
+" autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespaces before saving to a file
 
 " Vundle
 filetype off
@@ -34,6 +34,7 @@ Bundle 'Gundo'
 Bundle 'ack.vim'
 Bundle 'Syntastic'
 Bundle 'Tagbar'
+Bundle 'fugitive.vim'
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list=1
@@ -52,3 +53,5 @@ map <leader>t :TagbarToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>c :!ctags -R .<CR>
+" Clear the search buffer when hitting return
+nnoremap <CR> :nohlsearch<cr> 
