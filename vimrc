@@ -20,7 +20,7 @@ set splitright              " Split vertically on the right of the current buffe
 set t_Co=256                " 256-colour terminal
 set tabstop=4               " Tab == 4 spaces
 set wildignore=*.swp,*.bak,*.pyc " Ignore files with these extensions
-" autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespaces before saving to a file
+autocmd BufWritePre * :%s/\s\+$//e " Remove trailing whitespaces before saving to a file
 
 " Vundle
 filetype off
@@ -35,6 +35,7 @@ Bundle 'ack.vim'
 Bundle 'Syntastic'
 Bundle 'Tagbar'
 Bundle 'fugitive.vim'
+Bundle 'honza/dockerfile.vim'
 filetype plugin indent on
 
 let g:syntastic_always_populate_loc_list=1
