@@ -27,7 +27,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'Mustang2'
+Bundle 'Distinguished'
 Bundle 'ctrlp.vim'
 Bundle 'The-NERD-tree'
 Bundle 'Gundo'
@@ -45,7 +45,7 @@ let g:syntastic_python_checkers=['flake8']
 " Colour scheme
 syntax enable
 set background=dark
-colorscheme Mustang
+colorscheme distinguished
 
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
