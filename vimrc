@@ -32,15 +32,12 @@ Bundle 'ctrlp.vim'
 Bundle 'The-NERD-tree'
 Bundle 'Gundo'
 Bundle 'ack.vim'
-Bundle 'Syntastic'
 Bundle 'Tagbar'
 Bundle 'fugitive.vim'
 Bundle 'honza/dockerfile.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'vim-flake8'
 filetype plugin indent on
-
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_python_checkers=['flake8']
 
 " Colour scheme
 syntax enable
