@@ -35,6 +35,7 @@ Bundle 'ack.vim'
 Bundle 'Tagbar'
 Bundle 'fugitive.vim'
 Bundle 'honza/dockerfile.vim'
+Bundle 'TaskList.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-flake8'
 filetype plugin indent on
@@ -51,5 +52,6 @@ map <leader>t :TagbarToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>c :!ctags -R .<CR>
+map <leader>l <Plug>TaskList
 " Clear the search buffer when hitting return
-nnoremap <CR> :nohlsearch<cr> 
+nnoremap <CR> :nohlsearch<cr>
