@@ -38,6 +38,7 @@ Bundle 'honza/dockerfile.vim'
 Bundle 'TaskList.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-flake8'
+Bundle 'ropevim'
 filetype plugin indent on
 
 " Colour scheme
@@ -47,11 +48,12 @@ colorscheme distinguished
 
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
-map <leader>g :GundoToggle<CR>
+map <leader>u :GundoToggle<CR>
 map <leader>t :TagbarToggle<CR>
-map <leader>j :RopeGotoDefinition<CR>
+map <leader>g :RopeGotoDefinition<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>c :!ctags -R .<CR>
 map <leader>l <Plug>TaskList
+map <leader>r :RopeRename<CR>
 " Clear the search buffer when hitting return
 nnoremap <CR> :nohlsearch<cr>
