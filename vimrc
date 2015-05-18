@@ -31,14 +31,16 @@ Bundle 'Distinguished'
 Bundle 'ctrlp.vim'
 Bundle 'The-NERD-tree'
 Bundle 'Gundo'
-Bundle 'ack.vim'
+Bundle 'ag.vim'
 Bundle 'Tagbar'
 Bundle 'fugitive.vim'
-Bundle 'honza/dockerfile.vim'
+Bundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 Bundle 'TaskList.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-flake8'
 Bundle 'ropevim'
+Bundle 'alfredodeza/pytest.vim'
+Bundle 'Puppet-Syntax-Highlighting'
 filetype plugin indent on
 
 " Colour scheme
@@ -55,5 +57,4 @@ map <leader>b :CtrlPBuffer<CR>
 map <leader>c :!ctags -R .<CR>
 map <leader>l <Plug>TaskList
 map <leader>r :RopeRename<CR>
-" Clear the search buffer when hitting return
-nnoremap <CR> :nohlsearch<cr>
+map <leader>p :Pytest project verbose<CR>
