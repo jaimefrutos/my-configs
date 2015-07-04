@@ -39,14 +39,20 @@ Bundle 'TaskList.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-flake8'
 Bundle 'ropevim'
-Bundle 'alfredodeza/pytest.vim'
 Bundle 'Puppet-Syntax-Highlighting'
+Bundle 'benmills/vimux'
+Bundle 'janko-m/vim-test'
 filetype plugin indent on
 
 " Colour scheme
 syntax enable
 set background=dark
 colorscheme distinguished
+
+" vim-test
+let test#strategy = "vimux"
+let test#python#nose#build_args = ''
+let test#python#runner = 'nose'
 
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
@@ -56,5 +62,4 @@ map <leader>g :RopeGotoDefinition<CR>
 map <leader>b :CtrlPBuffer<CR>
 map <leader>c :!ctags -R .<CR>
 map <leader>l <Plug>TaskList
-map <leader>r :RopeRename<CR>
-map <leader>p :Pytest project verbose<CR>
+map <leader>n :Nose<CR>
