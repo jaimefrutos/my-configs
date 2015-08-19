@@ -42,6 +42,7 @@ Bundle 'ropevim'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'benmills/vimux'
 Bundle 'janko-m/vim-test'
+Bundle 'commentary.vim'
 filetype plugin indent on
 
 " Colour scheme
@@ -53,6 +54,9 @@ colorscheme distinguished
 let test#strategy = "vimux"
 let test#python#nose#build_args = ''
 let test#python#runner = 'nose'
+
+" Fugitive
+set diffopt+=vertical
 
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
