@@ -27,33 +27,24 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'Distinguished'
-Bundle 'ctrlp.vim'
 Bundle 'The-NERD-tree'
 Bundle 'Gundo'
 Bundle 'ag.vim'
 Bundle 'Tagbar'
 Bundle 'fugitive.vim'
 Bundle 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
-Bundle 'TaskList.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-flake8'
 Bundle 'ropevim'
 Bundle 'Puppet-Syntax-Highlighting'
-Bundle 'benmills/vimux'
-Bundle 'janko-m/vim-test'
 Bundle 'commentary.vim'
+Bundle 'morhetz/gruvbox'
 filetype plugin indent on
 
 " Colour scheme
 syntax enable
 set background=dark
-colorscheme distinguished
-
-" vim-test
-let test#strategy = "vimux"
-let test#python#nose#build_args = ''
-let test#python#runner = 'nose'
+colorscheme gruvbox
 
 " Fugitive
 set diffopt+=vertical
@@ -63,7 +54,3 @@ map <C-n> :NERDTreeToggle<CR>
 map <leader>u :GundoToggle<CR>
 map <leader>t :TagbarToggle<CR>
 map <leader>g :RopeGotoDefinition<CR>
-map <leader>b :CtrlPBuffer<CR>
-map <leader>c :!ctags -R .<CR>
-map <leader>l <Plug>TaskList
-map <leader>n :Nose<CR>
